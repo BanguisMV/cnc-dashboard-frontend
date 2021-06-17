@@ -1,34 +1,49 @@
+import { FaTachometerAlt,FaUsersCog,FaFolderOpen,FaUserAlt } from "react-icons/fa";
+
 type Route = {
     path:string;
     name:string;
-    icon?:string;
+    icon?:any;
     role:string[];
 }
 
 
 export const Routes:Route[] = [
     {
+        path: '/admin/dashboard',
+        name: 'Dashboard',
+        icon: FaTachometerAlt,
+        role: ['ADMIN'],
+    },
+    {
+        path: '/admin/projects',
+        name: 'Projects',
+        icon: FaFolderOpen,
+        role: ['ADMIN'],
+    },
+    {
+        path: '/admin/developers',
+        name: 'Developers',
+        icon: FaUsersCog,
+        role: ['ADMIN'],
+    },
+    {
         path: '/developer/dashboard',
         name: 'Dashboard',
-        icon: 'insights',
-        role: ['developer'],
+        icon: FaTachometerAlt,
+        role: ['DEVELOPER'],
     },
     {
         path: '/developer/profile',
         name: 'Profile',
-        icon: 'insights',
-        role: ['developer'],
+        icon: FaUserAlt,
+        role: ['DEVELOPER'],
       },
     {
         path: '/developer/projects',
         name: 'Projects',
-        icon: 'insights',
-        role: ['developer'],
+        icon: FaFolderOpen,
+        role: ['DEVELOPER'],
     },
-    {
-        path: '/developer/projects/:name',
-        name: 'Project',
-        icon: 'insights',
-        role: ['developer'],
-    },
+
 ]
