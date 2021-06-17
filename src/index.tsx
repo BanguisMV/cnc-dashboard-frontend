@@ -8,7 +8,7 @@ import store from './redux/store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/app">
+    <BrowserRouter >
       <ChakraProvider>
        <App />
       </ChakraProvider>
