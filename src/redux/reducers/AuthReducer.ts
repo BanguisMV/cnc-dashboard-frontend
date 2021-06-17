@@ -1,5 +1,9 @@
   
-  const INITIAL_STATE = {
+  type Auth = {
+    isLoggedIn:boolean;
+  }
+
+  const INITIAL_STATE:Auth = {
     isLoggedIn:false,
   };
   
@@ -14,7 +18,7 @@
               return {
                 ...state, 
                 isLoggedIn:false
-             };
+            };
            default: return state;
       }
   };

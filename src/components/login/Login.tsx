@@ -56,8 +56,8 @@ const Login = () => {
             setLoading(false)
             setInputs(values)
             localStorage.setItem('accessToken', 'hello')
+            localStorage.setItem('role', role[rndInt])
             dispatch({ type: 'LOGIN' })
-            dispatch({ type: role[rndInt] })
             history.push('/')
         },2000)
     }

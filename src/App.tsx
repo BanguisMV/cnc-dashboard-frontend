@@ -5,11 +5,13 @@ import PrivateRoute from './routes/PrivateRoute'
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import PublicRoute from "./routes/PublicRoute";
+import NotFoundPage from "./components/common/NotFoundPage";
+
 
 function App() {
 
   return (
-    <div className="App">
+    <div className="App" style={{ height:'100%'}}>
         <Switch>
 
             <PrivateRoute
@@ -40,7 +42,8 @@ function App() {
               role={['DEVELOPER']}
             />
 
-          <PublicRoute path='/login' component={Login} />
+          <PublicRoute exact path='/login' component={Login} />
+          <Route component={NotFoundPage} />
 
         </Switch>
     </div>
