@@ -21,30 +21,54 @@ import{ useState } from "react"
 import { MdArrowForward } from "react-icons/md"
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Formik, Form, Field,  } from 'formik';
- import * as Yup from 'yup';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 const LOGO = 'https://scontent.fceb1-1.fna.fbcdn.net/v/t1.6435-9/133144689_107483951253863_3205074034669199260_n.png?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHyuaGk6Kczk7EtNfRqg9vj4m0OF27i0YLibQ4XbuLRgl67yFz_hu5bZmJc4LeKwWmYXLUWlVBeZGo4tyYFqvCi&_nc_ohc=wijA_0DQvGIAX8ecQS6&_nc_ht=scontent.fceb1-1.fna&oh=cc7bbf7260f68c2a0d5b122d28b5fba3&oe=60CE3579'
 
+type LoginInputs = {
+    username:string;
+    password:string;
+}
 const Login = () => {
-
+    const dispatch = useDispatch()
+    const history = useHistory()
     const [Mobile420] = useMediaQuery("(max-width: 420px)")
     const [show, setShow] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [inputs, setInputs] = useState<LoginInputs>({
+        username:'',
+        password:''
+    })
+
+ 
     const mockSubmit = (values:any) => {
-        console.log(values)
+        function randomIntFromInterval(min:number, max:number) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        
+        const rndInt = randomIntFromInterval(0, 1)
+        const role = ['DEVELOPER', 'ADMIN']
+     
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
+            setInputs(values)
+            localStorage.setItem('accessToken', 'hello')
+            dispatch({ type: 'LOGIN' })
+            dispatch({ type: role[rndInt] })
+            history.push('/')
         },2000)
     }
     const handleClick = () => setShow(!show)
 
     const loginInputSchema = Yup.object({
             username: Yup.string()
-            .max(2, 'Must be 3 characters or more')
+            .min(2, 'Must be 3 characters or more')
             .required('Username is required'),
             password: Yup.string()
-            .max(3, 'Must be 3 characters or more')
+            .min(3, 'Must be 3 characters or more')
             .required('Password is required'),
         })
     
@@ -142,7 +166,6 @@ const Login = () => {
                             Github
                         </Button>
                     </HStack>
-
                 </Box>
         </Flex>
     )

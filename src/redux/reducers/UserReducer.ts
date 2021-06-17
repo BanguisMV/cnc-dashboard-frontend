@@ -1,22 +1,22 @@
   
   const INITIAL_STATE = {
-    isLoggedIn:false,
+    role:null,
   };
   
-  const authReducer = (state = INITIAL_STATE, action:any) => {
+const UserReducer = (state = INITIAL_STATE, action:any) => {
       switch (action.type) {
-          case "LOGIN":
+          case "ADMIN":
              return {
                ...state, 
-               isLoggedIn:true,
+               role:"ADMIN"
             };
-            case "LOGOUT":
+            case "DEVELOPER":
               return {
                 ...state, 
-                isLoggedIn:false
+                role:"DEVELOPER"
              };
            default: return state;
       }
   };
   
-  export default authReducer;
+  export default UserReducer;
