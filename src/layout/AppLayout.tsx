@@ -44,15 +44,15 @@ const Logout = () => {
 
 const profileIcon = <Avatar size="xs" name="Marky" src="https://scontent.fceb1-1.fna.fbcdn.net/v/t1.6435-1/cp0/p50x50/196499490_2274834015987112_1141050291778223582_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeHAbNM6zi1jTEjr4t5GQdkHf0iRcP0qa7d_SJFw_Sprt9Z2FLn7wZ8dEMFyd70PxCvGxPIvNU0kJrKQudBAiMyB&_nc_ohc=xaIIAKkYr0kAX_czwbi&_nc_ht=scontent.fceb1-1.fna&tp=27&oh=f35d679231b49885afca16c565b8c5e8&oe=60CF6C27" />
     return (
-        <Flex padding='0' margin='0' flexDirection='column'>
+        <Flex padding='0' margin='0' flexDirection='column' >
             <Box 
-                shadow='xs' 
+                shadow='sm' 
                 px={ Mobile666 ? '0' : '1.5rem'}
                 display='flex' 
                 alignItems='center'
                 justifyContent='space-between'
             >
-            <Container maxW="container.xl" >
+            <Container maxW="container.lg" >
             {Mobile666 &&  
              <HStack py={2} display='flex' alignItems='center' justifyContent='space-between'>
                 <Flex>
@@ -62,7 +62,6 @@ const profileIcon = <Avatar size="xs" name="Marky" src="https://scontent.fceb1-1
                         src={Logo}
                         alt="Logo"
                   />
-            
                 </Flex>
                 <Text fontSize='1xl' fontWeight='bold'>
              {title}
@@ -87,8 +86,8 @@ const profileIcon = <Avatar size="xs" name="Marky" src="https://scontent.fceb1-1
           
               <MenuDivider />
           
-              <MenuItem  onClick={Logout}>
-                  <Icon as={MdPowerSettingsNew} width='100%' w={5} h={5}  color="red.500"/>
+              <MenuItem  onClick={Logout} py={1}>
+                  <Icon as={MdPowerSettingsNew} width='100%' w={6} h={6}  color="white" bg='red' borderRadius='5px'  />
               </MenuItem>
             </MenuList>
           </Menu>
@@ -127,18 +126,21 @@ const profileIcon = <Avatar size="xs" name="Marky" src="https://scontent.fceb1-1
                   colorScheme='red'
                   borderRadius='full'
                   onClick={Logout}
+                  shadow='base'
                   icon={<Icon as={MdPowerSettingsNew} />} />
            </div>
           
                 </HStack>}
                 </Container>
-
             </Box>
-            <Container maxW="container.xl">
-                <Box  padding='1rem'>
+            
+         
+                <Box  padding='1rem' bg='gray.50'>
+                  <Container maxW="container.lg" >
                     {children}
+                  </Container>
                 </Box>
-            </Container>
+   
 
         </Flex>
     )

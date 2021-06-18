@@ -1,19 +1,11 @@
 // import { useDispatch } from 'react-redux'
+import AdminProject from '../../components/admin/AdminProject'
 import AppLayout from '../../layout/AppLayout'
 
 const Project = () => {
-    // const dispatch = useDispatch()
-
-    // const Logout = () => {
-    //     localStorage.removeItem('accessToken')
-    //     localStorage.removeItem('role')
-    //     dispatch({ type: 'LOGIN' })
-    //     window.location.href = '/'
-    // }
     return (
         <AppLayout title='Projects'>
-            Project
-        
+           <AdminProject />
         </AppLayout>
     )
 }

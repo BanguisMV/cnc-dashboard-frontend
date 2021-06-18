@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+.active button {
+    background-color: #a9c5dc !important;
+    color: white;
+ }
+
+ @media screen (max-width:667px) {
+ .chakra-menu__menu-list,.css-1ozmk1d {
+    background-color: #f2f2f2 !important;
+ }
+ }

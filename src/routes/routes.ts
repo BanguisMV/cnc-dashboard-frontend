@@ -34,16 +34,17 @@ export const Routes:Route[] = [
         role: ['DEVELOPER'],
     },
     {
-        path: '/developer/profile',
-        name: 'Profile',
-        icon: FaUserAlt,
-        role: ['DEVELOPER'],
-      },
-    {
         path: '/developer/projects',
         name: 'Projects',
         icon: FaFolderOpen,
         role: ['DEVELOPER'],
     },
+    {
+        path: '/developer/profile',
+        name: 'Profile',
+        icon: FaUserAlt,
+        role: ['DEVELOPER'],
+      },
+
 
 ]

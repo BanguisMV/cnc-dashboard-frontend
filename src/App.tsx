@@ -1,4 +1,6 @@
 import { Switch, Route } from "react-router-dom";
+import './styles/style.css';
+
 import Login from './pages/Login'
 
 import RouterWrapper from './routes/RouterWrapper'
@@ -15,6 +17,8 @@ import AdminDevelopers from "./pages/admin/AdminDevelopers";
 import DevDashboard from "./pages/developer/DevDashboard";
 import DevProfile from "./pages/developer/DevProfile";
 import DevProject from "./pages/developer/DevProject";
+
+
 
 function App() {
 

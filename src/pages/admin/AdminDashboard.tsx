@@ -1,20 +1,11 @@
 // import { useDispatch } from 'react-redux'
 import AppLayout from '../../layout/AppLayout'
-
+import AdminDashboard from '../../components/admin/AdminDashboard'
 const Dashboard = () => {
-    // const dispatch = useDispatch()
-    // const Logout = () => {
-    //     localStorage.removeItem('accessToken')
-    //     localStorage.removeItem('role')
-    //     dispatch({ type: 'LOGIN' })
-    //     window.location.href = '/'
-    // }
+
     return (
         <AppLayout title='Dashboard'>
-            <div style={{ height:'200vh'}}>
-            Dashboard
-            </div>
-     
+            <AdminDashboard />    
         </AppLayout>
     )
 }
