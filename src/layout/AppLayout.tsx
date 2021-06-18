@@ -135,7 +135,7 @@ const profileIcon = <Avatar size="xs" name="Marky" src="https://scontent.fceb1-1
             </Box>
             
          
-                <Box  padding='1rem' bg='gray.50'>
+                <Box   bg='gray.50'>
                   <Container maxW="container.lg" >
                     {children}
                   </Container>

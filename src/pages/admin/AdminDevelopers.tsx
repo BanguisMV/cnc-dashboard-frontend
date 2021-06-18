@@ -1,19 +1,10 @@
-// import { useDispatch } from 'react-redux'
 import AppLayout from '../../layout/AppLayout'
-
+import AdminDevelopers from '../../components/admin/developers/AdminDevelopers'
 const Developers = () => {
-    // const dispatch = useDispatch()
 
-    // const Logout = () => {
-    //     localStorage.removeItem('accessToken')
-    //     localStorage.removeItem('role')
-    //     dispatch({ type: 'LOGIN' })
-    //     window.location.href = '/'
-    // }
     return (
         <AppLayout title='Developers'>
-            Developers
-       
+           <AdminDevelopers />
         </AppLayout>
     )
 }
