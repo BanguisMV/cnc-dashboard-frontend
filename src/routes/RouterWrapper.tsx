@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 function RouterWrapper() {
     const user = useSelector((state:any) => state.user)
+
   switch (user.role) {
     case 'ADMIN':
       return <Redirect to="/admin/dashboard" />;

@@ -35,41 +35,41 @@ function App() {
             />
 
             <PrivateRoute
-              exact
+              
               path="/admin/dashboard"
               component={AdminDashboard}
               role={['ADMIN']}
             />
 
             <PrivateRoute
-              exact
+              
               path="/admin/projects"
               component={AdminProject}
               role={['ADMIN']}
             />
               <PrivateRoute
-              exact
+              
               path="/admin/developers"
               component={AdminDevelopers}
               role={['ADMIN']}
             />
 
             <PrivateRoute
-              exact
+              
               path="/developer/dashboard"
               component={DevDashboard}
               role={['DEVELOPER']}
             />
 
             <PrivateRoute
-              exact
+              
               path="/developer/profile"
               component={DevProfile}
               role={['DEVELOPER']}
             />
 
             <PrivateRoute
-              exact
+              
               path="/developer/projects"
               component={DevProject}
               role={['DEVELOPER']}

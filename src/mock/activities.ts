@@ -1,0 +1,17 @@
+export const activities = [
+    {id:'2', title:'Deploy 1', date:'12-22-2021', status:'Done'},
+    {id:'23', title:'Deploy 2', date:'12-21-2021', status:'Ongoing'},
+    {id:'242', title:'Deploy 3', date:'12-23-2021', status:'Done'},
+    {id:'2s5', title:'Deploy 4', date:'12-24-2021', status:'Ongoing'},
+    {id:'7s2', title:'Deploy 5', date:'12-25-2021', status:'Ongoing'},
+    {id:'26', title:'Deploy 6', date:'12-26-2021', status:'Done'},
+    {id:'2assd', title:'Deploy 7', date:'12-27-2021', status:'Ongoing'},
+    {id:'22ss31', title:'Deploy 8', date:'12-28-2021', status:'Done'},
+    {id:'2assad12sd', title:'Deploy 9', date:'12-29-2021', status:'Ongoing'},
+    {id:'253s2323', title:'Deploy 4', date:'12-24-2021', status:'Ongoing'},
+    {id:'722w3323123', title:'Deploy 5', date:'12-25-2021', status:'Ongoing'},
+    {id:'26ss123123123', title:'Deploy 6', date:'12-26-2021', status:'Done'},
+    {id:'2asd1qw23123123', title:'Deploy 7', date:'12-27-2021', status:'Ongoing'},
+    {id:'2231ss123123123', title:'Deploy 8', date:'12-28-2021', status:'Done'},
+    {id:'2asd123123123', title:'Deploy 9', date:'12-29-2021', status:'Ongoing'},
+]

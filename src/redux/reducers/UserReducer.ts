@@ -1,6 +1,14 @@
   
-  const INITIAL_STATE = {
-    role:null,
+  type User = {
+    id?:string;
+    token?:string;
+    role?:string | null;
+    isLoggedIn?:boolean;
+
+  }
+  const INITIAL_STATE:User = {
+    role:localStorage.getItem('role'),
+    isLoggedIn:false,
   };
   
 const UserReducer = (state = INITIAL_STATE, action:any) => {
@@ -14,7 +22,17 @@ const UserReducer = (state = INITIAL_STATE, action:any) => {
               return {
                 ...state, 
                 role:"DEVELOPER"
-             };
+            };
+            case "LOGIN":
+              return {
+                ...state, 
+                isLoggedIn:true,
+            };
+            case "LOGOUT":
+              return {
+                ...state, 
+                isLoggedIn:false,
+            };
            default: return state;
       }
   };

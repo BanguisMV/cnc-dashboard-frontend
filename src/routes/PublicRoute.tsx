@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
 const PublicRoute = ({ component:Component,role, ...rest }:any) => {
 
-    const auth = useSelector((state:any) => state.auth)
+    const user = useSelector((state:any) => state.user)
     // const user = useSelector((state:any) => state.user)
 
     const dispatch = useDispatch()
@@ -18,13 +18,12 @@ const PublicRoute = ({ component:Component,role, ...rest }:any) => {
       token ? dispatch({ type:'LOGIN' }) : dispatch({ type:'LOGOUT' })
       dispatch({ type:role })
 
-      
     },[dispatch])
   
 
     
     return (
-      auth.isLoggedIn ? (
+      user.isLoggedIn ? (
           <Redirect to="/" />
         ) : (
           <Route {...rest} render={({ props }:any) => <Component {...props} /> }/>
