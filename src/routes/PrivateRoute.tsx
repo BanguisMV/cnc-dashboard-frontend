@@ -7,7 +7,7 @@ import FullWidthSpinner from '../components/common/FullWidthSpinner'
 const PrivateRoute = ({ component:Component,role, ...rest }:any) => {
   const [ loading, setLoading ] = useState(false)
     const auth = useSelector((state:any) => state.auth)
-    const roles = localStorage.getItem('role');
+    const user = useSelector((state:any) => state.user)
 
  useEffect(() => {
   setLoading(true)
@@ -25,7 +25,7 @@ const PrivateRoute = ({ component:Component,role, ...rest }:any) => {
          <FullWidthSpinner />
       ) : (
         auth.isLoggedIn ? (
-          role.some((role:any) => role === roles) && (
+          role.some((role:any) => role === user.role) && (
             <Route {...rest}
                 render={({ props }:any) =>
                 auth.isLoggedIn ? (
